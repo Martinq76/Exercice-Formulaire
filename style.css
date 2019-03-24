@@ -1,3 +1,26 @@
-h1 {
-  text-align: center;
+form {
+  width: 60%;
+}
+
+legend {
+	 margin: auto;
+	 width: 30%;
+	 display: block;
+   text-align: center;
+   border: 2px solid black;
+   border-radius: 10px;
+   font-weight: bold;
+   font-size: 25px;
+}
+
+.formulaire1 {
+  background: #bbe7d6;
+}
+
+.formulaire2 {
+  background: #fcc197;
+}
+
+.formulaire3 {
+  background: #fcedb6;
 }

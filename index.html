@@ -3,133 +3,189 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" type="text/css" />
   <title>Formulaire Développeur</title>
 </head>
 
 <body>
-  <h1>Formulaire Développeur</h1>
   <form action="traitement.php" method="post">
-    <fieldset>
-      <legend id="legend1">Partie 1</legend>
-      <p>
-        <label for="civilite">Civilité :</label>
-        <select name="civilite" id="civilite" required>
-          <option value="monsieur">Monsieur</option>
-          <option value="madame">Madame</option>
-        </select>
-      </p>
-      <p>
-        <label for="nom">Nom :</label>
-        <input type="text" name="name" id="name" placeholder="Nom" size="10" required />
-      </p>
-      <p>
-        <label for="prenom">Prénom :</label>
-        <input type="text" name="firstname" id="firstname" placeholder="Prénom" size="10" required />
-      </p>
-      <p>
-        Date de naissance :
-        <input type="date" name="dateofbirth" id="dateofbirth" size="10" required />
-      </p>
-      <p>
-        <label for="phone">Numéro de téléphone :</label>
-        <input type="tel" name="phone" id="phone" placeholder="Numéro de téléphone" size="11" maxlength="10" required />
-      </p>
-      <p>
-        <label for="streetnumber">Numéro de rue :</label>
-        <input type="number" name="streetnumber" id="streetnumber" placeholder="Numéro de rue" size="15" required />
+    <fieldset class="formulaire1">
+      <legend class="formulaire1">Identité</legend>
+      <ol>
+        <p>
+          <li>
+            <label for="civilite">Civilité :</label>
+            <select name="civilite" id="civilite" required>
+              <option value="monsieur">Monsieur</option>
+              <option value="madame">Madame</option>
+            </select>
+          </li>
+        </p>
+        <p>
+          <li>
+            <label for="nom">Nom :</label>
+            <input type="text" name="name" id="name" placeholder="Nom" size="10" required />
+          </li>
+        </p>
+        <p>
+          <li>
+            <label for="prenom">Prénom :</label>
+            <input type="text" name="firstname" id="firstname" placeholder="Prénom" size="10" required />
+          </li>
+        </p>
+        <p>
+          <li>
+            Date de naissance :
+            <input type="date" name="dateofbirth" id="dateofbirth" size="10" required />
+          </li>
+        </p>
+        <p>
+          <li>
+            <label for="phone">Numéro de téléphone :</label>
+            <input type="tel" name="phone" id="phone" placeholder="Numéro de téléphone" size="11" maxlength="10" required />
+          </li>
+        </p>
+        <p>
+          <li>
+            <label for="streetnumber">Numéro de rue :</label>
+            <input type="number" name="streetnumber" id="streetnumber" placeholder="Numéro de rue" size="10" required />
 
-        <label for="streetname">Nom de la rue :</label>
-        <input type="text" name="streetname" id="streetname" placeholder="Nom de la rue" size="15" required />
-      </p>
-      <label for="postalcode">Code postal :</label>
-      <input type="text" name="postalcode" id="postalcode" placeholder="Code postal" required />
-      <p>
-        <label for="city">Ville :</label>
-        <input type="text" name="city" id="city" placeholder="Ville" required />
-      </p>
-      <p>
-        <label for="pseudo">Login :</label><br />
-        <input type="text" name="pseudo" id="pseudo" placeholder="login" required />
-
-        <br />
-        <label for="pass">Mot de passe :</label><br />
-        <input type="password" name="pass" id="pass" placeholder="Mot de passe" maxlength="20" pattern="[0-9a-zA-Z]{1-4}" title="Veuillez saisir un identifiant contenant entre 1 et 4 chiffre" required />
-      </p>
+            <label for="streetname">Nom de la rue :</label>
+            <input type="text" name="streetname" id="streetname" placeholder="Nom de la rue" size="10" required />
+          </li>
+        </p>
+        <p>
+          <li>
+            <label for="postalcode">Code postal :</label>
+            <input type="number" name="postalcode" id="postalcode" placeholder="Code postal" size="10" required />
+          </li>
+        </p>
+        <p>
+          <li>
+            <label for="city">Ville :</label>
+            <input type="text" name="city" id="city" placeholder="Ville" size="10" required />
+          </li>
+        </p>
+        <p>
+          <li>
+            <label for="pseudo">Login :</label>
+            <input type="text" name="pseudo" id="pseudo" placeholder="login" size="10" required />
+          </li>
+        </p>
+        <p>
+          <li>
+            <label>Mot de passe :</label>
+            <input type="password" id="mdp" name="mdp" placeholder="Votre mot de passe" size="10" maxlength="20" required />
+            <input type="submit" value="Valider" />
+          </li>
+        </p>
+      </ol>
     </fieldset>
 
-    <fieldset>
-      <legend id="legend2">Partie 2</legend>
-      <p>
-        Quel est votre niveau de Développeur ?<br />
-        <input type="radio" name="level" value="beginner" id="beginner" />
-        <label for="beginner">Débutant</label>
-        <br />
-        <input type="radio" name="level" value="junior" id="junior" />
-        <label for="junior">Junior</label>
-        <br />
-        <input type="radio" name="level" value="expert" id="expert" />
-        <label for="expert">Expert</label>
-      </p>
-      <p>
-        Cochez les langages que vous maîtrisez :<br />
-        <input type="checkbox" name="ruby" id="ruby" />
-        <label for="ruby">Ruby</label>
-        <br />
-        <input type="checkbox" name="python" id="python" />
-        <label for="python">Python</label>
-        <br />
-        <input type="checkbox" name="php" id="php" />
-        <label for="php">Php</label>
-        <br />
-        <input type="checkbox" name="java" id="java" />
-        <label for="java">Java</label>
-        <br />
-        <input type="checkbox" name="nodejs" id="nodejs" />
-        <label for="nodejs">NodeJS</label>
-        <br />
-        <input type="checkbox" name="reactjs" id="reactjs" />
-        <label for="reactjs">ReactJS</label>
-        <br />
-        <input type="checkbox" name="c#" id="c"" />
-      <label for=" c#">C#</label>
-      </p>
-      <p>
-        <label for="os">Sur quel OS travaillez vous ?</label><br />
-        <select name="os" id="os">
-          <optgroup label="Windows">
-            <option value="windows10">Windows 10</option>
-            <option value="windows8">Windows 8</option>
-            <option value="windows7">Windows 7</option>
-          </optgroup>
-          <optgroup label="Linux">
-            <option value="ubuntu">Ubuntu</option>
-            <option value="debian">Debian</option>
-          </optgroup>
-          <optgroup label="Autres">
-            <option value="macos">MacOS</option>
-            <option value="chromeos">ChromeOS</option>
-            <option value="other">Autre</option>
-          </optgroup>
-        </select>
-      </p>
+    <fieldset class="formulaire2">
+      <legend class="formulaire2">Compétences</legend>
+      <ol>
+        <p>
+          <li>
+            Quel est votre niveau de Développeur ?<br />
+            <input type="radio" name="level" value="beginner" id="beginner" checked />
+            <label for="beginner">Débutant</label>
+            <input type="radio" name="level" value="junior" id="junior" />
+            <label for="junior">Junior</label>
+            <input type="radio" name="level" value="expert" id="expert" />
+            <label for="expert">Expert</label>
+          </li>
+        </p>
+        <p>
+          <li>
+            Cochez les langages que vous maîtrisez :<br />
+            <input type="checkbox" name="ruby" id="ruby" />
+            <label for="ruby">Ruby</label>
+            <input type="checkbox" name="python" id="python" />
+            <label for="python">Python</label>
+            <input type="checkbox" name="php" id="php" />
+            <label for="php">Php</label>
+            <input type="checkbox" name="java" id="java" />
+            <label for="java">Java</label>
+            <input type="checkbox" name="nodejs" id="nodejs" />
+            <label for="nodejs">NodeJS</label>
+            <input type="checkbox" name="reactjs" id="reactjs" />
+            <label for="reactjs">ReactJS</label>
+            <input type="checkbox" name="c#" id="c" />
+            <label for="c#">C#</label>
+          </li>
+        </p>
+        <p>
+          <li>
+            <label for="os">Sur quel OS travaillez-vous ?</label><br />
+            <select name="os" id="os">
+              <optgroup label="Windows">
+                <option value="windows10">Windows 10</option>
+                <option value="windows8">Windows 8</option>
+                <option value="windows7">Windows 7</option>
+              </optgroup>
+              <optgroup label="Linux">
+                <option value="ubuntu">Ubuntu</option>
+                <option value="debian">Debian</option>
+              </optgroup>
+              <optgroup label="Autres">
+                <option value="macos">MacOS</option>
+                <option value="chromeos">ChromeOS</option>
+                <option value="other">Autre</option>
+              </optgroup>
+            </select>
+          </li>
+        </p>
+      </ol>
     </fieldset>
 
-    <fieldset>
-      <legend id="legend3">Partie 3</legend>
-      <p>
-        <label for="date">Quand êtes vous entrer en formation ?</label>
-        <input type="date" name="dateformation" id="dateformation" />
-      </p>
-      <p>
-        <label for="urlgithub">Veuillez indiquer votre url Git Hub :</label>
-        <input type="url" name="urlgithub" id="urlgithub" placeholder="Url Git Hub" />
-      </p>
-      <p>
-        <label for="comment">Mettez un commentaire :</label>
-        <br />
-        <textarea name="comment" id="comment" rows="8" cols="80" placeholder="Ecrits ici ton commentaire !"></textarea>
-      </p>
+    <fieldset class="formulaire3">
+      <legend class="formulaire3">Formation</legend>
+      <ol>
+        <p>
+          <li>Quand êtes-vous rentré en formation ?</li>
+
+          <select class="Date" name="Month">
+            <option value="">Janvier</option>
+            <option value="">Février</option>
+            <option value="">Mars</option>
+            <option value="">Avril</option>
+            <option value="">Mai</option>
+            <option value="">Juin</option>
+            <option value="">Juillet</option>
+            <option value="">Aout</option>
+            <option value="">Septembre</option>
+            <option value="">Octobre</option>
+            <option value="">Novembre</option>
+            <option value="">Décembre</option>
+          </select>
+          <select class="Date" name="Year">
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+          </select>
+        </p>
+        <p>
+          <li>
+            <label for="urlgithub">Veuillez indiquer votre url Git Hub :</label>
+            <input type="url" name="urlgithub" id="urlgithub" placeholder="Url Git Hub" size="10" />
+          </li>
+        </p>
+        <p>
+          <li>
+            <label for="comment">Mettez un commentaire :</label>
+            <br />
+            <textarea name="comment" id="comment" rows="8" cols="80" placeholder="Ecrivez ici votre commentaire !"></textarea>
+          </li>
+        </p>
+      </ol>
     </fieldset>
   </form>
   <input type="submit" value="Envoyer !" />
